@@ -1,8 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { getLocales } from 'expo-localization';
 import { I18n } from 'i18n-js';
 import { translations } from './translations/translations';
+import { Text } from './components/ThemedText';
+import { View } from './components/ThemedView';
 
 const i18n = new I18n(translations);
 const deviceLanguage = getLocales()[0].languageCode;
@@ -32,7 +34,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
