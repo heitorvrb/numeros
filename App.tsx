@@ -10,15 +10,13 @@ const i18n = new I18n(translations);
 const deviceLanguage = getLocales()[0].languageCode;
 i18n.locale = deviceLanguage;
 
-//TODO: should not show duplicate numbers
-const numbers = [
-  Math.floor(Math.random() * 60) + 1,
-  Math.floor(Math.random() * 60) + 1,
-  Math.floor(Math.random() * 60) + 1,
-  Math.floor(Math.random() * 60) + 1,
-  Math.floor(Math.random() * 60) + 1,
-  Math.floor(Math.random() * 60) + 1,
-];
+const numbers: number[] = [];
+while (numbers.length < 6) {
+  const n = Math.floor(Math.random() * 60) + 1;
+  if (!numbers.includes(n)) {
+    numbers.push(n)
+  }
+}
 numbers.sort((a, b) => a - b);
 
 export default function App() {
