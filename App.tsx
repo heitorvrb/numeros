@@ -19,7 +19,7 @@ const numbers = [
   Math.floor(Math.random() * 60) + 1,
   Math.floor(Math.random() * 60) + 1,
 ];
-numbers.sort(); //TODO: doesn't work
+numbers.sort((a, b) => a - b);
 
 export default function App() {
   return (
