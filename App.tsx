@@ -3,8 +3,8 @@ import { StyleSheet } from 'react-native';
 import { getLocales } from 'expo-localization';
 import { I18n } from 'i18n-js';
 import { translations } from './translations/translations';
-import { Text } from './components/ThemedText';
-import { View } from './components/ThemedView';
+import { Text } from './components/themed/ThemedText';
+import { View } from './components/themed/ThemedView';
 
 const i18n = new I18n(translations);
 const deviceLanguage = getLocales()[0].languageCode;

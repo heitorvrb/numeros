@@ -1,5 +1,5 @@
 import { StyleSheet, View as DefaultView } from 'react-native';
-import useThemedColors from '../themes/useThemedColors';
+import useThemedColors from '../../themes/useThemedColors';
 
 export function View(props: DefaultView['props']) {
     const themedColors = useThemedColors();

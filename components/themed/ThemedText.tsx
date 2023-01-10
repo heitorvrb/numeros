@@ -1,5 +1,5 @@
 import { StyleSheet, Text as DefaultText } from 'react-native';
-import useThemedColors from '../themes/useThemedColors';
+import useThemedColors from '../../themes/useThemedColors';
 
 export function Text(props: DefaultText['props']) {
     const themedColors = useThemedColors();
